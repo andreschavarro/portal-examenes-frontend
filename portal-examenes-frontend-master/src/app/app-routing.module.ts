@@ -7,6 +7,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 
 const routes: Routes = [
   {
@@ -27,15 +29,25 @@ const routes: Routes = [
   {
     path:'admin',
     component:DashboardComponent,
-    pathMatch:'full',
-    canActivate:[AdminGuard]
+    canActivate:[AdminGuard],
+    children:[                    // este es un componente hijo de admin por eso tenemos otro route-outle en el dasboard de administrador en el navegador e miraria asi /admin/profile para poder acceder a profile si ponemos solo prifile no nos va a funcionar 
+      {
+        path:'profile',
+        component:ProfileComponent
+      },
+      {
+        path: '',
+        component: WelcomeComponent
+      }
+    ]
   },
   {
     path:'user-dashboard',
     component:UserDashboardComponent,
     pathMatch:'full',
     canActivate:[NormalGuard]
-  }
+  },
+  
 ];
 
 @NgModule({
