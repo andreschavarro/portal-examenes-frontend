@@ -16,6 +16,8 @@ import { UserDashboardComponent } from './pages/user/user-dashboard/user-dashboa
 import { ProfileComponent } from './pages/profile/profile.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SidebarComponent } from './pages/admin/sidebar/sidebar.component';
+import { ViewCategoriasComponent } from './pages/admin/view-categorias/view-categorias.component';
+import { AddCategoriaComponent } from './pages/admin/add-categoria/add-categoria.component';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -38,7 +40,9 @@ import {MatListModule} from '@angular/material/list';
     DashboardComponent,
     UserDashboardComponent,
     ProfileComponent,
-    SidebarComponent
+    SidebarComponent,
+    ViewCategoriasComponent,
+    AddCategoriaComponent
   ],
   imports: [
     BrowserModule,
