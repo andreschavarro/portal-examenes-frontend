@@ -11,6 +11,12 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import { ViewCategoriasComponent } from './pages/admin/view-categorias/view-categorias.component';
 import { AddCategoriaComponent } from './pages/admin/add-categoria/add-categoria.component';
+import { ViewExamenesComponent } from './pages/admin/view-examenes/view-examenes.component';
+import { AddExamenComponent } from './pages/admin/add-examen/add-examen.component';
+import { ActualizarExamenesComponent } from './pages/admin/actualizar-examenes/actualizar-examenes.component';
+import { ViewExamenPreguntaComponent } from './pages/admin/view-examen-pregunta/view-examen-pregunta.component';
+import { AddPreguntaComponent } from './pages/admin/add-pregunta/add-pregunta.component';
+import { ActualizarPreguntaComponent } from './pages/admin/actualizar-pregunta/actualizar-pregunta.component';
 
 const routes: Routes = [
   {
@@ -48,6 +54,30 @@ const routes: Routes = [
       {
         path: 'add-categoria',
         component: AddCategoriaComponent
+      },
+      {
+        path: 'examenes',
+        component: ViewExamenesComponent
+      },
+      {
+        path: 'add-examen',
+        component: AddExamenComponent
+      },
+      {
+        path: 'examen/:examenId',
+        component: ActualizarExamenesComponent
+      },
+      {
+        path:'view-preguntas/:examenId/:titulo',
+        component: ViewExamenPreguntaComponent
+      },
+      {
+        path: 'add-pregunta/:examenId/:titulo',
+        component: AddPreguntaComponent
+      },
+      {
+        path: 'pregunta/:preguntaId',
+        component: ActualizarPreguntaComponent
       }
     ]
   },
@@ -55,7 +85,13 @@ const routes: Routes = [
     path:'user-dashboard',
     component:UserDashboardComponent,
     pathMatch:'full',
-    canActivate:[NormalGuard]
+    canActivate:[NormalGuard],
+    // children: [
+    //   {
+    //     path: '',
+
+    //   }
+    // ]
   },
   
 ];
@@ -64,4 +100,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { }  

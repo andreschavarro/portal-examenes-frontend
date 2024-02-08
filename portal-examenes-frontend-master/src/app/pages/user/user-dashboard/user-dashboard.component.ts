@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDashboardComponent implements OnInit {
 
+  categorias:any;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.categorias
   }
 
 }
