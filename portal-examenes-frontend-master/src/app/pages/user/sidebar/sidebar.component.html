@@ -1,14 +1,12 @@
 <mat-card>
     <mat-action-list>
-        <div mat-subheader>Menu</div>
-        <button [routerLink]="['/user/dashboard']" mat-list-item >
-            <mat-icon mat-list-icon>Inicio</mat-icon>
-        </button>
-        <button mat-list-item>
-            <mat-icon mat-list-icon >Quiz</mat-icon> Examenes
-        </button>
-        <button mat-list-item *ngFor="let item of categorias">
-            <mat-icon mat-list-icon >account_circle</mat-icon> {{item.titulo}}
-        </button>
+      <div mat-subheader>Categorías disponibles</div>
+      <!-- <p> le mandamos esta ruta para que cuando le demos en examenes nos traoga todos los examenes esto esta asociado con el login y load component</p> -->
+      <button routerLink="/user-dashboard/0" mat-list-item>   
+        <mat-icon mat-list-icon>quiz</mat-icon>Exámenes
+      </button>
+      <button [routerLink] = "'/user-dashboard/'+c.categoriaId" mat-list-item *ngFor = "let c of categorias">
+        <mat-icon mat-list-icon>account_circle</mat-icon> {{ c.titulo }}
+      </button>
     </mat-action-list>
-</mat-card>
+  </mat-card>

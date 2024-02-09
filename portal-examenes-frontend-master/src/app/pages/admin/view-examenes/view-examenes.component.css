@@ -2,3 +2,13 @@
     background-image: url('https://img.freepik.com/vector-gratis/concepto-diseno-plano-cms-computadora_23-2148817993.jpg?w=740&t=st=1707253050~exp=1707253650~hmac=160a735a06b3036ad94e6fb7d30733956d247cecaa008c2bfaafba19af8afff7');
     background-size: cover;
   }
+
+
+  .scrollable-content {
+    max-height: 500px; /* Set a maximum height for the scrollable area */
+    overflow-y: auto; /* Add a vertical scrollbar if needed */
+  }
+  
+  .exam-container {
+    margin-bottom: 16px;
+  }

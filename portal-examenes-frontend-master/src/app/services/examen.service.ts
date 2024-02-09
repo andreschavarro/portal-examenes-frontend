@@ -31,5 +31,17 @@ export class ExamenService {
     return this.http.put(`${baserUrl}/examen/`, examen);
   }
 
+  listarExamenesDeUnaCategoria(categoriaId:any){
+    return this.http.get(`${baserUrl}/examen/categoria/${categoriaId}`);
+  }
 
+  obtenerExamenesActivos(){
+    return this.http.get(`${baserUrl}/examen/activo`);
+  }
+
+  obtenerExamenesInactivosPorCategoria(categoriaId:any){
+    return this.http.get(`${baserUrl}/examen/categoria/activo/${categoriaId}`);
+  }
+
+  
 }

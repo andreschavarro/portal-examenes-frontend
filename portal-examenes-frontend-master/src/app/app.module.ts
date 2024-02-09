@@ -26,6 +26,7 @@ import { ViewExamenPreguntaComponent } from './pages/admin/view-examen-pregunta/
 import { AddPreguntaComponent } from './pages/admin/add-pregunta/add-pregunta.component';
 import { ActualizarPreguntaComponent } from './pages/admin/actualizar-pregunta/actualizar-pregunta.component';
 import { SidebarComponent as appsidebaruser } from './pages/user/sidebar/sidebar.component';
+import { LoadExamenComponent } from './pages/user/load-examen/load-examen.component';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -35,6 +36,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+
 
 
 
@@ -57,7 +59,8 @@ import {MatListModule} from '@angular/material/list';
     ViewExamenPreguntaComponent,
     AddPreguntaComponent,
     ActualizarPreguntaComponent,
-    appsidebaruser
+    appsidebaruser,
+    LoadExamenComponent
   ],
   imports: [
     BrowserModule,
