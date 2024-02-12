@@ -27,6 +27,9 @@ import { AddPreguntaComponent } from './pages/admin/add-pregunta/add-pregunta.co
 import { ActualizarPreguntaComponent } from './pages/admin/actualizar-pregunta/actualizar-pregunta.component';
 import { SidebarComponent as appsidebaruser } from './pages/user/sidebar/sidebar.component';
 import { LoadExamenComponent } from './pages/user/load-examen/load-examen.component';
+import { InstruccionesComponent } from './pages/user/instrucciones/instrucciones.component';
+import { StartComponent } from './pages/user/start/start.component';
+
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -36,6 +39,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+
 
 
 
@@ -60,7 +64,9 @@ import {MatListModule} from '@angular/material/list';
     AddPreguntaComponent,
     ActualizarPreguntaComponent,
     appsidebaruser,
-    LoadExamenComponent
+    LoadExamenComponent,
+    InstruccionesComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
