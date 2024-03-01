@@ -35,5 +35,9 @@ export class PreguntaService {
     return this.http.get(`${baserUrl}/pregunta/examen/todos/${examenId}`);
   }
 
+  public evaluarExamen(preguntas:any){
+    return this.http.post(`${baserUrl}/pregunta/evaluar-examen/`,preguntas);
+  }
+
    
 }

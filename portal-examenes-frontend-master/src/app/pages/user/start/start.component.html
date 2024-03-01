@@ -58,6 +58,10 @@
               El cuestionario se enviará automáticamente cuando el temporizador llegue 0:0
             </mat-card-subtitle>
           </mat-card-header>
+          <mat-card-content>
+            <h1 class="text-center">{{ obtenerHoraFormateada() }}</h1>
+            <mat-spinner mode="determinate" style="margin: auto;" [value]="(timer/(this.preguntas.length * 2 * 60)*100)"></mat-spinner>
+          </mat-card-content>
         </mat-card>
       </div>
     </div>
@@ -78,6 +82,7 @@
           <h1>Respuestas correctas : {{ respuestasCorrectas }}</h1>
         </mat-card-content>
         <mat-card-actions class="text-center">
+          <button (click)="imprimirPagina()" mat-raised-button color="primary">Imprimir</button>
           <button mat-raised-button color="accent" [routerLink] = "'/user-dashboard/0'">Inicio</button>
         </mat-card-actions>
       </mat-card>

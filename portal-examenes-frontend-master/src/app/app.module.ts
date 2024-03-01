@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common'; 
+import { NgxUiLoaderModule, NgxUiLoaderHttpModule } from 'ngx-ui-loader'; 
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SignupComponent } from './pages/signup/signup.component';
@@ -29,6 +30,7 @@ import { SidebarComponent as appsidebaruser } from './pages/user/sidebar/sidebar
 import { LoadExamenComponent } from './pages/user/load-examen/load-examen.component';
 import { InstruccionesComponent } from './pages/user/instrucciones/instrucciones.component';
 import { StartComponent } from './pages/user/start/start.component';
+import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 
 
 import {MatButtonModule} from '@angular/material/button';
@@ -39,6 +41,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -66,7 +69,8 @@ import {MatListModule} from '@angular/material/list';
     appsidebaruser,
     LoadExamenComponent,
     InstruccionesComponent,
-    StartComponent
+    StartComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +87,12 @@ import {MatListModule} from '@angular/material/list';
     MatIconModule,
     MaterialModule,
     MatListModule,
-    CommonModule
+    CommonModule,
+    MatProgressSpinnerModule,
+    NgxUiLoaderModule,
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground:true
+    })
   ],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
